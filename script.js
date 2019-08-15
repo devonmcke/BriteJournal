@@ -5,12 +5,12 @@
 //I need a save option
 
 //random image generator
-let briteNote;
-let opacityChange = 1;
-let charCount = 0;
-let fontColorChange = 255;
-let randomImage = Math.floor(Math.random() * 14);
-let imageArr = [
+var briteNote;
+var opacityChange = 1;
+var charCount = 0;
+var fontColorChange = 255;
+var randomImage = Math.floor(Math.random() * 14);
+var imageArr = [
   "https://images.pexels.com/photos/1126384/pexels-photo-1126384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   "https://images.pexels.com/photos/585759/pexels-photo-585759.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
