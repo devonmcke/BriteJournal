@@ -6,11 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Brite Journal</title>
     <link rel="stylesheet" href="style.css" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display&amp;display=swap" rel="stylesheet"/>
   </head>
 
   <body>
@@ -23,11 +19,12 @@
         autofocus
       ></textarea>
 
-      <input type="button" value="Send Email" onclick="sendEmail();" />
+      <input type="button" value="Send Email" onclick="sendEmail();" class="button" />
+    </div>
+    <div id="emailPopup" class="popup">
+      <p>Email: <input type="text" class="input-element" /></p>
     </div>
 
     <script src="script.js"></script>
   </body>
 </html>
-
-<!-- create send button -->

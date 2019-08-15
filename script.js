@@ -2,9 +2,14 @@
 
 //add event listener, where counting characters.
 
+// make popup invisible upon loading
+document.getElementById('emailPopup').style.display = "none";
+
 //I need a save option
 
 //random image generator
+
+
 var briteNote;
 var opacityChange = 1;
 var charCount = 0;
@@ -31,7 +36,7 @@ document.body.style.backgroundImage = "url(" + imageArr[randomImage] + ")";
 function textEval(t) {
   console.log(t.value.length);
   charCount++;
-  if (charCount % 2 == !0) {
+  if (charCount % 2 !== 0) {
     if (opacityChange > 0.75) {
       opacityChange -= 0.008;
       //When you start typing, the opacity changes faster during the first 25%
@@ -69,16 +74,16 @@ function textEval(t) {
       1 +
       ")";
 
-    document.getElementsByTagName("textarea")[0].style.borderColor =
-      "rgba(" +
-      fontColorChange +
-      "," +
-      fontColorChange +
-      "," +
-      fontColorChange +
-      "," +
-      1 +
-      ")";
+    // document.getElementsByTagName("textarea")[0].style.borderColor =
+    //   "rgba(" +
+    //   fontColorChange +
+    //   "," +
+    //   fontColorChange +
+    //   "," +
+    //   fontColorChange +
+    //   "," +
+    //   1 +
+    //   ")";
 
     // document.body.style.backgroundColor = "rgba(0,0,0," + opacityChange + ")";
   }
@@ -88,9 +93,22 @@ function textEval(t) {
 
 function sendEmail() {
   briteNote = document.getElementsByTagName("textarea")[0].value;
+  if (document.getElementById('emailPopup').style.display == "none") {
+    // display the popup and change button value to 'close'
+    document.getElementById('emailPopup').style.display = "block";
+    document.getElementsByTagName('textarea')[0].style.display = "none";
+    document.getElementsByClassName('button')[0].value = "Close";
+    document.getElementsByClassName('button')[0].style.top = "500px";
+  } else if (document.getElementById('emailPopup').style.display == "block") {
+    // hide the popup and change button value to 'Send Email'
+    document.getElementById('emailPopup').style.display = "none";
+    document.getElementsByTagName('textarea')[0].style.display = "block";
+    document.getElementsByClassName('button')[0].value = "Send Email";
+    document.getElementsByClassName('button')[0].style.top = "200px";
+  }
 
-  window.open(
-    "mailto:devonmcke.f231f99@m.evernote.com?subject=Brite Journal&body=" +
-      briteNote
-  );
+  // window.open(
+  //   "mailto:devonmcke.f231f99@m.evernote.com?subject=Brite Journal&body=" +
+  //     briteNote
+  // );
 }
