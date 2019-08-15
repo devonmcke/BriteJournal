@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Brite Journal</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="black-background">
+      <textarea
+        rows="5"
+        cols="45"
+        oninput="textEval(this);"
+        placeholder="This is where you will type in your journal entry and as you type the background color will change"
+        autofocus
+      ></textarea>
+
+      <input type="button" value="Send Email" onclick="sendEmail();" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- create send button -->
