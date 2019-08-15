@@ -3,12 +3,11 @@
 //add event listener, where counting characters.
 
 // make popup invisible upon loading
-document.getElementById('emailPopup').style.display = "none";
+document.getElementById("emailPopup").style.display = "none";
 
 //I need a save option
 
 //random image generator
-
 
 var briteNote;
 var opacityChange = 1;
@@ -93,22 +92,41 @@ function textEval(t) {
 
 function sendEmail() {
   briteNote = document.getElementsByTagName("textarea")[0].value;
-  if (document.getElementById('emailPopup').style.display == "none") {
+  if (document.getElementById("emailPopup").style.display == "none") {
     // display the popup and change button value to 'close'
-    document.getElementById('emailPopup').style.display = "block";
-    document.getElementsByTagName('textarea')[0].style.display = "none";
-    document.getElementsByClassName('button')[0].value = "Close";
-    document.getElementsByClassName('button')[0].style.top = "500px";
-  } else if (document.getElementById('emailPopup').style.display == "block") {
+    document.getElementById("emailPopup").style.display = "block";
+    document.getElementsByTagName("textarea")[0].style.display = "none";
+    document.getElementsByClassName("button")[0].value = "Close";
+    document.getElementsByClassName("button")[0].style.top = "500px";
+  } else if (document.getElementById("emailPopup").style.display == "block") {
     // hide the popup and change button value to 'Send Email'
-    document.getElementById('emailPopup').style.display = "none";
-    document.getElementsByTagName('textarea')[0].style.display = "block";
-    document.getElementsByClassName('button')[0].value = "Send Email";
-    document.getElementsByClassName('button')[0].style.top = "200px";
+    document.getElementById("emailPopup").style.display = "none";
+    document.getElementsByTagName("textarea")[0].style.display = "block";
+    document.getElementsByClassName("button")[0].value = "Send Email";
+    document.getElementsByClassName("button")[0].style.top = "200px";
   }
 
   // window.open(
-  //   "mailto:devonmcke.f231f99@m.evernote.com?subject=Brite Journal&body=" +
+  //   "mailto:"devonmcke.f231f99@m.evernote.com"?subject=Brite Journal&body=" +
   //     briteNote
   // );
 }
+
+function inputEmail() {
+  var date = new Date();
+  var userEmail = document.getElementsByClassName("input-element")[0].value;
+  window.open(
+    "mailto:" +
+      userEmail +
+      "?subject=Brite Journal " +
+      date.getDate() +
+      "/" +
+      date.getMonth() +
+      "/" +
+      (date.getYear() + 1900) +
+      "&body=" +
+      briteNote
+  );
+}
+
+//date.getDate() + "/" + date.getMonth() + "/" + (date.getYear()+1900);

@@ -45,6 +45,7 @@ body {
   /* background-color: rgb(255, 255, 255); */
   background-image: url("https://images.pexels.com/photos/434551/pexels-photo-434551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
+  min-height: 100%;
 }
 
 .button {
@@ -78,7 +79,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.3);
   position: relative;
   top: 135px;
   color: white;
@@ -96,10 +97,10 @@ body {
 .input-element {
   border-radius: 3px;
   border: none;
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.3);
   color: black;
   font-family: inherit;
-  font-size: 1.25em;
+  font-size: inherit;
   font-weight: inherit;
 }
 
