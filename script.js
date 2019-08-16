@@ -48,8 +48,13 @@ function textEval(t) {
       opacityChange -= 0.002;
       // When you type during the last 25%, the opacity change goes slower
     }
-    document.getElementById("black-background").style.backgroundColor =
-      "rgba(0,0,0," + opacityChange + ")";
+
+    $("#black-background").css({
+      "background-color": "rgba(0,0,0," + opacityChange + ")"
+    });
+
+    // document.getElementById("black-background").style.backgroundColor =
+    //   "rgba(0,0,0," + opacityChange + ")";
 
     if (fontColorChange > 180) {
       fontColorChange -= 4;
@@ -130,3 +135,10 @@ function inputEmail() {
 }
 
 //date.getDate() + "/" + date.getMonth() + "/" + (date.getYear()+1900);
+
+// resize based on  mobile view
+
+window.onresize = function() {
+  if (window.innerWidth < 500) {
+  }
+};
