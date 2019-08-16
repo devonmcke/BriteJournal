@@ -10,7 +10,6 @@ textarea {
   margin-right: auto;
   background-color: rgba(255, 255, 255, 0.25);
   position: relative;
-  top: 145px;
   color: rgb(255, 255, 255);
   font-size: 1.15em;
   /* vertical-align: middle; */
@@ -45,9 +44,16 @@ body {
   /* background-color: rgb(255, 255, 255); */
   background-image: url("https://images.pexels.com/photos/434551/pexels-photo-434551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
-  min-height: 100%;
 }
 
+#button-cont {
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 0;
+}
 .button {
   width: 150px;
   height: 40px;
@@ -55,10 +61,8 @@ body {
   color: white;
   border: none;
   border-radius: 3px;
+  display: inline-block;
   position: relative;
-  display: block;
-  margin: auto;
-  top: 200px;
 }
 
 .button:hover {
@@ -74,14 +78,11 @@ body {
   display: none;
 }
 
-.popup {
+#emailPopup {
   font-family: "Libre Caslon Display", serif;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   background-color: rgba(255, 255, 255, 0.3);
-  position: relative;
-  top: 135px;
   color: white;
   font-size: 1.15em;
   /* vertical-align: middle; */

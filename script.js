@@ -4,6 +4,7 @@
 
 // make popup invisible upon loading
 document.getElementById("emailPopup").style.display = "none";
+document.getElementsByClassName("button")[1].style.display = "none";
 
 //I need a save option
 
@@ -102,13 +103,13 @@ function sendEmail() {
     document.getElementById("emailPopup").style.display = "block";
     document.getElementsByTagName("textarea")[0].style.display = "none";
     document.getElementsByClassName("button")[0].value = "Close";
-    document.getElementsByClassName("button")[0].style.top = "500px";
+    document.getElementsByClassName("button")[1].style.display = "inline-block";
   } else if (document.getElementById("emailPopup").style.display == "block") {
     // hide the popup and change button value to 'Send Email'
     document.getElementById("emailPopup").style.display = "none";
     document.getElementsByTagName("textarea")[0].style.display = "block";
     document.getElementsByClassName("button")[0].value = "Send Email";
-    document.getElementsByClassName("button")[0].style.top = "200px";
+    document.getElementsByClassName("button")[1].style.display = "none";
   }
 
   // window.open(
@@ -138,7 +139,17 @@ function inputEmail() {
 
 // resize based on  mobile view
 
-window.onresize = function() {
-  if (window.innerWidth < 500) {
-  }
-};
+// window.onresize = function() {
+//   if (window.innerWidth < 550) {
+//     console.log("> 550");
+//     document.getElementsByTagName("textarea")[0].style.top = "10px";
+//     document.getElementById("emailPopup").style.top = "10px";
+//   } else {
+//     document.getElementsByTagName("textarea")[0].style.top = "145px";
+//     document.getElementById("emailPopup").style.top = "135px";
+//   }
+
+//   $("textarea")[0].css({
+//     top: "10px"
+//   });
+// };

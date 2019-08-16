@@ -15,6 +15,22 @@
 
   <body>
     <div id="black-background">
+      <div id="button-cont">
+        <p>
+          <input
+            type="button"
+            value="Send Email"
+            onclick="sendEmail();"
+            class="button"
+          />
+          <input
+            type="button"
+            value="Send Email"
+            onclick="inputEmail();"
+            class="button"
+          />
+        </p>
+      </div>
       <textarea
         rows="5"
         cols="45"
@@ -22,26 +38,11 @@
         placeholder="This is where you will type in your journal entry and as you type the background color will change"
         autofocus
       ></textarea>
-
-      <input
-        type="button"
-        value="Send Email"
-        onclick="sendEmail();"
-        class="button"
-      />
-    </div>
-    <div id="emailPopup" class="popup">
-      <p style="text-align: center;">
-        Email: <input type="text" class="input-element" />
-      </p>
-      <p>
-        <input
-          type="button"
-          value="Send Email"
-          onclick="inputEmail();"
-          class="button"
-        />
-      </p>
+      <div id="emailPopup" class="popup">
+        <p style="text-align: center;">
+          Email: <input type="text" class="input-element" />
+        </p>
+      </div>
     </div>
 
     <script src="script.js"></script>
