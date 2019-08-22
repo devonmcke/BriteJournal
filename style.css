@@ -40,11 +40,11 @@ textarea:focus {
   background-color: rgba(0, 0, 0, 1);
 }
 
-body {
+/* body {
   /* background-color: rgb(255, 255, 255); */
-  background-image: url("https://images.pexels.com/photos/434551/pexels-photo-434551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  background-size: cover;
-}
+/* background-image: url("https://images.pexels.com/photos/434551/pexels-photo-434551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
+/* background-size: cover; */
+/* }  */
 
 #button-cont {
   display: block;
